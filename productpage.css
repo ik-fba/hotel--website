@@ -245,6 +245,16 @@ header{
   margin: 25px 0;
 }
 
+#cartMessage {
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+
+#cartQuantity {
+  margin-top: 10px;
+}
+
 .single-product h4{
   margin: 20px 0;
   font-size: 22px;
@@ -301,8 +311,6 @@ footer{
   text-align: center;
   font-size: 20px;
 }
-
-
 
 @media(max-width:991px){
   .navmenu{
