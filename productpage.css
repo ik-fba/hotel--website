@@ -16,11 +16,16 @@
   background:#072019;
 }
 
-.navbar h2{
+.navbar h2 a{
   color: #ffffff;
   font-size: 25px;
   font-weight: 500;
   padding: 0px 20px;
+}
+
+.navbar h2:hover a {
+  color: #0b910b;
+  transition: color 0.5s ease;
 }
 
 .navmenu{
@@ -32,6 +37,36 @@
 
 .navmenu li{
   display: inline-block;
+  position: relative;
+  padding: 0 10px;
+}
+
+.navmenu li::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  right: 100%;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.navmenu li:hover::before {
+  width: 75%;
+}
+
+.navmenu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1;
+  width: 1px;
+  height: 80%;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .navmenu li a{
@@ -40,6 +75,13 @@
   padding: 0px 10px;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.navmenu li:hover a {
+  color: #0b910b;
+  transition: color 0.5s ease;
 }
 
 .search-box .search{
@@ -105,14 +147,60 @@ header{
   height: auto;
 }
 
-.menubar i{
+.menu div{
+  width: 120px;
+  height: 10px;
+  margin: -30px;
+  position: absolute;
   color: #ffffff;
   font-size: 30px;
   padding-right: 20px;
-  position: absolute;
-  top: 22px;
-  right: 40px;
+  top: 60px;
+  right: 22px;
   cursor: pointer;
+}
+
+.menu span{
+  background: #ffffff;
+  width: 20%;
+  height: 5px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: transform 0.5s, width 0.5s;
+}
+
+.menu .line-1{
+  transform: translate(-50%, -5px);
+}
+
+.menu .line-3{
+  transform: translate(-50%, 10px);
+}
+
+.menu:hover span {
+  background-color: #0b910b;
+  transition: 0.5s ease;
+}
+
+.openmenu .line-1{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.openmenu .line-3{
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.openmenu .line-2{
+  width: 0;
+}
+
+.menubar:hover i{
+  color: #0b910b;
+  transition: color 0.5s ease;
 }
 
 .small-container{
@@ -135,6 +223,7 @@ header{
 .col-2 img{
   max-width: 100%;
   padding: 50px 0;
+  border: 2px solid black;
 }
 
 .single-product .col-2 img{
@@ -144,11 +233,6 @@ header{
 .single-product .col-2{
   padding: 20px;
 }
-
-.image-border {
-  border: 2px solid black;
-}
-
 
 .col-2{
   flex-basis: 50%;
@@ -173,7 +257,7 @@ header{
   padding-left: 10px;
   font-size: 20px;
   margin-right: 10px;
-  border: 1px solid #ff523b;
+  border: 1px solid black;
 }
 
 input:focus{
@@ -186,7 +270,7 @@ a{
 }
 
 .single-product .fa{
-  color: #ff523b;
+  color: #0b910b;
   margin-left: 10px;
 }
 
@@ -196,16 +280,19 @@ p{
 
 .btn{
   display: inline-block;
-  background: #ff523b;
-  color: #fff;
+  background: #0b910b;
+  color: #ffffff;
   padding: 8px 36px;
   margin: 30px 0;
   border-radius: 30px;
-  transition: background 0.5s;
+  transition: all 0.5s ease;
 }
 
 .btn:hover{
-  background: #563434;
+  color: #0b910b;
+  background: #ffffff;
+  transition: all 0.5s;
+  border: 2px solid #0b910b;
 }
 
 footer{
@@ -226,6 +313,7 @@ footer{
     width: 300px;
     height: auto;
     background: #072019;
+    transition: right 0.5s ease;
   }
 
   .navmenu li{
@@ -244,4 +332,10 @@ footer{
   .navmenu.open{
     right: 0;
   }
+
+  .navmenu li:hover::before {
+    width: 30%;
+    transform:translate(100%);
+    transition: 0.5s ease;
+ }
 }

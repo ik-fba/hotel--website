@@ -16,11 +16,16 @@
   background:#072019;
 }
 
-.navbar h2{
+.navbar h2 a{
   color: #ffffff;
   font-size: 25px;
   font-weight: 500;
   padding: 0px 20px;
+}
+
+.navbar h2:hover a {
+  color: #0b910b;
+  transition: color 0.5s ease;
 }
 
 .navmenu{
@@ -32,6 +37,36 @@
 
 .navmenu li{
   display: inline-block;
+  position: relative;
+  padding: 0 10px;
+}
+
+.navmenu li::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  right: 100%;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.navmenu li:hover::before {
+  width: 75%;
+}
+
+.navmenu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1;
+  width: 1px;
+  height: 80%;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .navmenu li a{
@@ -40,6 +75,13 @@
   padding: 0px 10px;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.navmenu li:hover a {
+  color: #0b910b;
+  transition: color 0.5s ease;
 }
 
 .search-box .search{
@@ -155,8 +197,11 @@ section{
 }
 
 .cat-books .books img{
+  object-fit: cover;
   width: 100%;
+  height: 100%;
   transition: transform 0.3s;
+  border-radius: 50%;
 }
 
 .cat-books .books img:hover{
@@ -175,14 +220,60 @@ section{
   padding-top: 10px;
 }
 
-.menubar i{
+.menu div{
+  width: 120px;
+  height: 10px;
+  margin: -30px;
+  position: absolute;
   color: #ffffff;
   font-size: 30px;
   padding-right: 20px;
-  position: absolute;
-  top: 22px;
-  right: 40px;
+  top: 60px;
+  right: 22px;
   cursor: pointer;
+}
+
+.menu span{
+  background: #ffffff;
+  width: 20%;
+  height: 5px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: transform 0.5s, width 0.5s;
+}
+
+.menu .line-1{
+  transform: translate(-50%, -5px);
+}
+
+.menu .line-3{
+  transform: translate(-50%, 10px);
+}
+
+.menu:hover span {
+  background-color: #0b910b;
+  transition: 0.5s ease;
+}
+
+.openmenu .line-1{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.openmenu .line-3{
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.openmenu .line-2{
+  width: 0;
+}
+
+.menubar:hover i{
+  color: #0b910b;
+  transition: color 0.5s ease;
 }
 
 .set-row{
@@ -279,17 +370,24 @@ section{
 }
 
 .set-row .col .dates span{
-  background: #072019;
+  background: #0b910b;
   color: #ffffff;
   padding: 12px 20px;
   font-size: 20px;
   border-radius: 50px;
+  margin-left: -25px;
+}
+
+.set-row .col .dates span:hover{
+  background: #ffffff;
+  color: #0b910b;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 #contactus{
   background: #e7f0f4ac;
   width: 100%;
-  
 }
 
 .contact-row{
@@ -318,7 +416,7 @@ section{
 
 .contact-row form input::placeholder,
 textarea::placeholder{
-  color: #000;
+  color: grey;
 }
 
 .contact-row form input[type="submit"]{
@@ -330,18 +428,21 @@ textarea::placeholder{
   border: none;
   border-radius: 10px;
   outline: none;
+  margin-top: 10px;
 }
 
 .contact-row form input[type="submit"]:hover{
   border: 1px solid #0b910b;
   color: #0b910b;
   background: #ffffff;
+  transition: all 0.5s ease;
 }
 
 .contact-row .col img{
-  width: 530px;
+  width: 450px;
   height: auto;
   padding-left: 20px;
+  margin-left: -20px;
 }
 
 .contact-row.col h2{
@@ -375,6 +476,7 @@ footer{
     width: 300px;
     height: auto;
     background: #072019;
+    transition: right 0.5s ease;
   }
 
   .navmenu li{
@@ -393,6 +495,12 @@ footer{
   .navmenu.open{
     right: 0;
   }
+
+  .navmenu li:hover::before {
+    width: 30%;
+    transform:translate(100%);
+    transition: 0.5s ease;
+}
 
   .cat-books .books .book-img{
     position: relative;
@@ -489,7 +597,7 @@ footer{
   .cat-books{
     display: block;
     position: relative;
-    left: 0%;
+    left: 10%;
   }
 
   .cat-books .books .book-img{
@@ -512,9 +620,10 @@ footer{
   }
 
   .contact-row .col img{
-    width: 320px;
+    width: 350px;
     height: auto;
     padding-left: 0px;
+    margin-left: 0px;
   }
 
   .contact-row form input{
