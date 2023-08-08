@@ -383,6 +383,7 @@ section{
   color: #0b910b;
   transition: all 0.5s;
   cursor: pointer;
+  border: 1px solid #0b910b;
 }
 
 #contactus{
