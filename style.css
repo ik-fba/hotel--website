@@ -298,6 +298,7 @@ section{
 .set-row .about-content{
   padding-left: 30px;
   margin-bottom: 60px;
+  margin-left: -30px;
 }
 
 .set-row .about-content h2{
@@ -365,7 +366,7 @@ section{
 
 .set-row .col .dates{
   position: absolute;
-  top: 65%;
+  top: 55%;
   left: 5%;
 }
 
