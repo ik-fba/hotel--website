@@ -1,217 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="ID=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>IK's School of Thought</title>
-
+  <title>Hotel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
-
 </head>
-
 <body>
 
-  <header>
+  <header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-hotel"> Hotel</i></a>
+
     <nav class="navbar">
-      <div class="logo">
-        <h2><a href="index.html">Bookstore</a></h2>
-      </div>
-
-      <div class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contactus">Contact Us</a></li>
-          <li><a href="#cart"><i class="bx bx-cart"></i></a></li>
-        </ul>
-
-        <div class="search-box">
-          <input type="search" class="search" placeholder="Search here...">
-          <a href="#"><i class="bx bx-search"></i></a>
-        </div>
-      </div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#room">Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#review">Reviews</a>
+      <a href="#faq">FAQs</a>
+      <a href="#reservation" class="btn">Book now</a>
     </nav>
 
-<div class="container">
-  <div class="menu" id="menu">
-    <div>
-  <span class="line-1"></span>
-  <span class="line-2"></span>
-  <span class="line-3"></span>
-</div>
-</div>
-</div>
-
-<div class="main-header">
-      <div class="header">
-        <h5>IK's School of Thought</h5>
-        <h2>For All Your Reading Needs</h2>
-        <p>"Reading is essential for those who seek to rise above the ordinary." - Jim Rohn</p>
-
-        <a href="" class="btn">Read More</a>
-      </div>
-
-      <img src="./images/bookshelf.gif" alt="">
-    </div>
+    <div id="menu-btn" class="fas fa-bars"></div>
 
   </header>
 
-  <section id="categories">
-    <div class="cat-row">
-      <div class="cat-header">
-        <h2>Book Categories</h2>
-      </div>
+  <section class="home" id="home">
+    <div class="swiper home-slider">
 
-      <div class="cat-books">
-        <div class="books">
-          <div class="book-img">
-            <a href="nonfiction.html">
-            <img src="./images/non fiction.jpg" alt="">
-          </a>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide" style="background: url(./images/holiday1.jpg) no-repeat">
+          <div class="content">
+            <h3>Where dreams come true.</h3>
+            <a href="#reservation" class="btn">Book a room</a>
           </div>
-          <h4>Non-Fiction</h4>
-          <p>"Non-fiction is the art of telling the truth in a way that rivets the reader's imagination." - Truman Capote</p>
         </div>
-
-        <div class="books">
-          <div class="book-img">
-            <a href="finance.html">
-            <img src="./images/financial freedom.jpg" alt="">
-          </a>
+        <div class="swiper-slide slide" style="background: url(./images/holiday2.jpg) no-repeat">
+          <div class="content">
+            <h3>Creating magical moments, every stay.</h3>
+            <a href="#reservation" class="btn">Book a room</a>
           </div>
-          <h4>Finance</h4>
-          <p>"Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver." - Ayn Rand</p>
         </div>
-
-        <div class="books">
-          <div class="book-img">
-            <a href="selfhelp.html">
-            <img src="./images/self-help.jpg" alt="">
-          </a>
+        <div class="swiper-slide slide" style="background: url(./images/holiday3.jpeg) no-repeat">
+          <div class="content">
+            <h3>Where fantasies become memories.</h3>
+            <a href="#reservation" class="btn">Book a room</a>
           </div>
-          <h4>Self-Help</h4>
-          <p>"Your life does not get better by chance, it gets better by change." - Jim Rohn</p>
         </div>
-
-      </div>
-
-      <div class="cat-books">
-        <div class="books">
-          <div class="book-img">
-          <a href="humanbehaviour.html">
-            <img src="./images/human behaviour.jpg" alt="">
-          </a>
+        <div class="swiper-slide slide" style="background: url(./images/holiday4.jpg) no-repeat">
+          <div class="content">
+            <h3>Relax and forget about the office.</h3>
+            <a href="#reservation" class="btn">Book a room</a>
           </div>
-          <h4>Human Behaviour</h4>
-          <p>"People don't always remember what you say or even what you do, but they always remember how you made them feel." - Maya Angelou</p>
         </div>
-
-        <div class="books">
-          <div class="book-img">
-            <a href="spiritual.html">
-            <img src="./images/spiritual.jpg" alt="">
-          </a>
-          </div>
-          <h4>Spiritual</h4>
-          <p>"Spirituality is not adopting more beliefs and assumptions but uncovering the best in you." - Amit Ray</p>
-        </div>
-
-        <div class="books">
-          <div class="book-img">
-            <a href="information.html">
-            <img src="./images/history.jpg" alt="">
-          </a>
-          </div>
-          <h4>Information</h4>
-          <p>"Let the stories of the past inspire your journey towards an extraordinary future." - Unknown</p>
-        </div>
-
-        </div>
-
-      </div>
-  </section>
-
-  <section id="about">
-    <div class="set-row">
-      <img src="./images/bookstore.gif" alt="">
-
-      <div class="about-content">
-      <h2>About Our Bookstore</h2>
-      <p>Step into a world of boundless imagination and knowledge at our bookstore, <br> where every page holds the promise of adventure and enlightenment.</p>
-
-      <a href="#" class="btn2">Read More</a>
-    </div>
-  </div>
-  </section>
-
-  <section id="blog">
-    <h2 class="blog-header">From Our Blog</h2>
-    <div class="set-row">
-      <div class="col">
-      <img src="./images/typing.gif" alt="">
-      <h4>Unveiling Worlds: Insights from the Bookstore Chronicles</h4>
-      <p>Explore books, authors, and literary wonders through our captivating bookstore blog, 'Unveiling Worlds'.</p>
-      <a href="#">Read More</a>
-
-      <div class="dates">
-        <a href="#"><span>7th August 2023</span></a>
-      </div>
-    </div>
-
-    <div class="col">
-      <img src="./images/writing.gif" alt="">
-      <h4>Literary Insights: Navigating Books and Beyond</h4>
-      <p>Navigate the vast seas of literature and beyond with 'Literary Insights,' your compass to discovering books, authors, and the boundless realms they unveil.</p>
-
-      <a href="#">Read More</a>
-
-      <div class="dates">
-        <a href="#"><span>7th August 2023</span></a>
-      </div>
-    </div>
-
-  </div>
-  </section>
-
-  <section id="contactus">
-    <div class="contact-row">
-      <div class="col">
-        <h2>Contact Us</h2>
-
-        <form action="">
-          <input type="text" placeholder="Name">
-          <br>
-          <input type="text" placeholder="Email">
-          <br>
-          <input type="text" placeholder="Phone Number">
-          <br>
-          <textarea cols="20" rows="5" placeholder="Message"></textarea>
-          <br>
-          <input type="submit" value="Send">
-        </form>
       </div>
 
-      <div class="col">
-        <img src="./images/contact-us.gif" alt="">
-      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
 
     </div>
   </section>
 
-  <div class="footer">
-    <div class="footer">
-      <p>@2023 All Rights Reserved by IK's School of Thought</p>
+  <section class="availability">
+    <form action="">
+      <div class="box">
+        <p>Check In <span>*</span></p>
+        <input type="date" class="input">
+      </div>
+      <div class="box">
+        <p>Check Out <span>*</span></p>
+        <input type="date" class="input">
+      </div>      
+      
+      <div class="box">
+        <p>Adults <span>*</span></p>
+        <select name="adults" class="input">
+          <option value="1">1 adult</option>
+          <option value="2">2 adults</option>
+          <option value="3">3 adults</option>
+          <option value="4">4 adults</option>
+          <option value="5">5 adults</option>
+          <option value="6">6 adults</option>
+          </select>
+      </div>
+      <div class="box">
+        <p>Children <span>*</span></p>
+        <select name="adults" class="input">
+          <option value="1">1 child</option>
+          <option value="2">2 children</option>
+          <option value="3">3 children</option>
+          <option value="4">4 children</option>
+          <option value="5">5 children</option>
+          <option value="6">6 children</option>
+          </select>
+      </div>
+
+      <div class="box">
+        <p>Rooms <span>*</span></p>
+        <select name="adults" class="input">
+          <option value="1">1 room</option>
+          <option value="2">2 rooms</option>
+          <option value="3">3 rooms</option>
+          <option value="4">4 rooms</option>
+          <option value="5">5 rooms</option>
+          <option value="6">6 rooms</option>
+          </select>
+      </div>
+
+      <input type="submit" value="Check availability" class="btn">
+    </form>
+  </section>
+
+  <section class="about" id="about">
+    <div class="row">
+      <div class="image">
+        <img src="./images/hotelfront.jpg" alt="">
+      </div>
+
+      <div class="content" id="about">
+        <h3>About Us</h3>
+        <p>Discover a world where dreams come true. We embody luxury and comfort in every detail. With our unwavering commitment to exceptional hospitality, we offer an escape where personalized service, elegant accommodations, and memorable experiences converge. Whether you're here for business or leisure, we invite you to experience a haven of relaxation, sophistication, and enchantment like no other.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <script src="./script.js"></script>
+  <section class="room" id="room">
+    <h1 class="heading">Our Rooms</h1>
+    <div class="swiper room-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <div class="image">
+            <span class="price">£28.99/night</span>
+            <img src="./images/hotelroom.jpg" alt="">
+            <a href="#" class="fas fa-shopping-cart"></a>
+          </div>
+          <div class="content">
+          <h3>Executive room</h3>
+          <p>Experience refined elegance and premium amenities in our Executive Rooms, designed to cater to your comfort and sophistication, whether you're here for business or leisure.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a href="#reservation" class="btn">Book now</a>
+        </div>
+        </div>
+        <div class="swiper-slide slide">
+          <div class="image">
+            <span class="price">£27.99/night</span>
+            <img src="./images/luxury2.jpg" alt="">
+            <a href="#" class="fas fa-shopping-cart"></a>
+          </div>
+          <div class="content">
+          <h3>Deluxe room</h3>
+          <p>Indulge in the epitome of luxury with our Deluxe Rooms, where every detail is meticulously crafted to provide a lavish and rejuvenating retreat.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a href="#reservation" class="btn">Book now</a>
+        </div>
+        </div>
+        <div class="swiper-slide slide">
+          <div class="image">
+            <span class="price">£29.99/night</span>
+            <img src="./images/luxury3.jpg" alt="">
+            <a href="#" class="fas fa-shopping-cart"></a>
+          </div>
+          <div class="content">
+          <h3>Family suite</h3>
+          <p>Elevate your family getaway with our spacious Family Suites, offering a seamless blend of comfort and togetherness for an unforgettable stay.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a href="#reservation" class="btn">Book now</a>
+        </div>
+        </div>
+      </div>
 
+      <div class="swiper-pagination">
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services">
+
+    <div class="box-container">
+
+      <div class="box">
+        <img src="./images/swimming.png" alt="">
+        <h3>Swimming Pool</h3>
+      </div>
+      <div class="box">
+        <img src="./images/dine.png" alt="">
+        <h3>Food & Drink</h3>
+      </div>
+      <div class="box">
+        <img src="./images/restaurant.png" alt="">
+        <h3>Restaurant</h3>
+      </div>
+      <div class="box">
+        <img src="./images/fitness.png" alt="">
+        <h3>Fitness</h3>
+      </div>
+      <div class="box">
+        <img src="./images/beauty spa.png" alt="">
+        <h3>Beauty Spa</h3>
+      </div>
+      <div class="box">
+        <img src="./images/resort beach.png" alt="">
+        <h3>Resort Beach</h3>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="gallery" id="gallery">
+
+    <h1 class="heading">Our Gallery</h1>
+
+    <div class="swiper gallery-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <img src="./images/gallery1.jpg" alt="">
+          <div class="icon">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <img src="./images/gallery2.jpg" alt="">
+          <div class="icon">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <img src="./images/gallery3.jpg" alt="">
+          <div class="icon">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <img src="./images/gallery4.jpg" alt="">
+          <div class="icon">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <img src="./images/gallery5.jpg" alt="">
+          <div class="icon">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <img src="./images/gallery6.jpg" alt="">
+          <div class="icon">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="review" id="review">
+    <div class="swiper review-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <h2 class="heading">Client Reviews</h2>
+          <i class="fas fa-quote-right"></i>
+          <p>Minha estadia superou todas as expectativas. O serviço, as acomodações e a atenção aos detalhes foram excepcionais, tornando-a uma experiência inesquecível.</p>
+          <div class="user">
+          <img src="./images/ronaldinho.png" alt="">
+          <div class="user-info">
+            <h3>Ronaldinho</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <h2 class="heading">Client Reviews</h2>
+          <i class="fas fa-quote-right"></i>
+          <p>Minha estadia superou todas as expectativas. O serviço, as acomodações e a atenção aos detalhes foram excepcionais, tornando-a uma experiência inesquecível.</p>
+          <div class="user">
+          <img src="./images/ronaldo.png" alt="">
+          <div class="user-info">
+            <h3>Cristiano</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <h2 class="heading">Client Reviews</h2>
+          <i class="fas fa-quote-right"></i>
+          <p>Mi estadía superó todas las expectativas. El servicio, las instalaciones y la atención al detalle fueron excepcionales, lo que la convirtió en una experiencia inolvidable</p>
+          <div class="user">
+          <img src="./images/messi face.png" alt="">
+          <div class="user-info">
+            <h3>Lionel</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <h2 class="heading">Client Reviews</h2>
+          <i class="fas fa-quote-right"></i>
+          <p>Minha estadia superou todas as expectativas. O serviço, as acomodações e a atenção aos detalhes foram excepcionais, tornando-a uma experiência inesquecível.</p>
+          <div class="user">
+          <img src="./images/neymar face.png" alt="">
+          <div class="user-info">
+            <h3>Neymar</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <h2 class="heading">Client Reviews</h2>
+          <i class="fas fa-quote-right"></i>
+          <p>My stay exceeded all expectations. The service, accommodations, and attention to detail were exceptional, making it an unforgettable experience.</p>
+          <div class="user">
+          <img src="./images/antetokounmpo.png" alt="">
+          <div class="user-info">
+            <h3>Giannis</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide">
+          <h2 class="heading">Client Reviews</h2>
+          <i class="fas fa-quote-right"></i>
+          <p>My experience went beyond any expectations. The service, lodgings, and meticulous attention to detail were outstanding, resulting in an unforgettable journey.</p>
+          <div class="user">
+          <img src="./images/steph.png" alt="">
+          <div class="user-info">
+            <h3>Steph</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="faqs" id="faq">
+
+    <h1 class="heading">Frequently Asked Questions</h1>
+
+    <div class="row">
+
+      <div class="image">
+        <img src="./images/faqs.png" alt="">
+      </div>
+
+      <div class="content">
+
+        <div class="box active">
+          <h3>What payment methods do you accept?</h3>
+          <p>We accept a variety of payment methods in the UK, including major credit cards (Visa, Mastercard, American Express), debit cards, and digital payment options like Apple Pay and Google Pay.</p>
+        </div>
+
+        <div class="box">
+          <h3>How do I make a reservation?</h3>
+          <p>Visit our website, select dates, room type, provide details, and get a confirmation email.</p>
+        </div>
+        <div class="box">
+          <h3>What amenities are included in the rooms?</h3>
+          <p>Rooms have comfy beds, private bathrooms, Wi-Fi, TV, AC, and room service.</p>
+        </div>
+        <div class="box">
+          <h3>Is parking available on-site?</h3>
+          <p>Yes, secure on-site parking is available for your convenience.</p>
+        </div>
+        <div class="box">
+          <h3>What is your cancellation policy?</h3>
+          <p>Cancel within 24 hours before check-in for a refund. Check our policy for details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservation" id="reservation">
+    <h1 class="heading">Book Now</h1>
+    <form action="">
+      <div class="container">
+      <div class="box">
+        <p>Name <span>*</span></p>
+        <input type="text" class="input" placeholder="Your name">
+      </div>
+      <div class="box">
+        <p>Email <span>*</span></p>
+        <input type="text" class="input" placeholder="Your email">
+      </div>
+      <div class="box">
+        <p>Check In <span>*</span></p>
+        <input type="date" class="input">
+      </div>
+      <div class="box">
+        <p>Check Out <span>*</span></p>
+        <input type="date" class="input">
+      </div>
+      <div class="box">
+        <p>Adults <span>*</span></p>
+        <select name="adults" class="input">
+          <option value="1">1 adult</option>
+          <option value="2">2 adults</option>
+          <option value="3">3 adults</option>
+          <option value="4">4 adults</option>
+          <option value="5">5 adults</option>
+          <option value="6">6 adults</option>
+          </select>
+      </div>
+      <div class="box">
+        <p>Children <span>*</span></p>
+        <select name="child" class="input">
+          <option value="1">1 child</option>
+          <option value="2">2 children</option>
+          <option value="3">3 children</option>
+          <option value="4">4 children</option>
+          <option value="5">5 children</option>
+          <option value="6">6 children</option>
+          </select>
+      </div>
+      <div class="box">
+        <p>Room types <span>*</span></p>
+        <select name="adults" class="input">
+          <option value="1">Standard room</option>
+          <option value="2">Deluxe room</option>
+          <option value="3">Executive suite</option>
+          <option value="4">Family suite</option>
+          </select>
+      </div>
+
+    </div>
+
+      <input type="submit" value="Check availability" class="btn">
+
+    </form>
+  </section>
+
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>Contact Information</h3>
+        <a href="#"> <i class="fas fa-phone"></i> +123 456 789</a>
+        <a href="#"> <i class="fas fa-envelope"></i> email@email.com</a>
+        <a href="#"> <i class="fas fa-map"></i> London, United Kingdom</a>
+      </div>
+
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="#home"><i class="fas fa-arrow-right"></i> Home</a>
+        <a href="#about"><i class="fas fa-arrow-right"></i> About</a>
+        <a href="#room"><i class="fas fa-arrow-right"></i> Rooms</a>
+        <a href="#gallery"><i class="fas fa-arrow-right"></i> Gallery</a>
+        <a href="#review"><i class="fas fa-arrow-right"></i> Reviews</a>
+        <a href="#faq"><i class="fas fa-arrow-right"></i> FAQs</a>
+        <a href="#reservation"><i class="fas fa-arrow-right"></i> Book Now</a>
+      </div>
+      
+
+      <div class="box">
+        <h3>Extra Links</h3>
+        <a href="#"><i class="fas fa-arrow-right"></i> Refund Policy</a>
+      </div>      
+
+    </div>
+
+    <div class="share">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+      <div class="credit">&copy; Copyright @ 2023 by <span>IKSchoolOfThought</span>
+      </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

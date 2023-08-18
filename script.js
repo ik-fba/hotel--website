@@ -1,22 +1,101 @@
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .navbar');
 
-addToCartButtons.forEach(button => {
-  button.addEventListener('click', function(event) {
-    event.preventDefault();
-    button.innerHTML = 'Added to Cart!';
-    button.classList.add('added');
+menu.onclick = () => {
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
+}
 
-    setTimeout(() => {
-      button.innerHTML = 'Add to Cart <i class="bx bx-cart"></i>';
-      button.classList.remove('added');
-    }, 3000);
-  });
+window.onscroll = () => {
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+};
+
+var swiper = new Swiper(".home-slider", {
+  grabCursor:true,
+  loop:true,
+  centeredSlides:true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
-let menu = document.getElementById("menu");
-let navbar = document.querySelector(".navmenu");
+var swiper = new Swiper(".room-slider", {
+  spaceBetween: 20,
+  grabCursor:true,
+  loop:true,
+  centeredSlides:true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
 
-menu.onclick = function(){
-  menu.classList.toggle("openmenu");
-  navbar.classList.toggle('open');
-};
+var swiper = new Swiper(".gallery-slider", {
+  spaceBetween: 10,
+  grabCursor:true,
+  loop:true,
+  centeredSlides:true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    991: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+var swiper = new Swiper(".review-slider", {
+  spaceBetween: 10,
+  grabCursor:true,
+  loop:true,
+  centeredSlides:true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+let accordions = document.querySelectorAll('.faqs .row .content .box');
+accordions.forEach(acco => {
+  acco.onclick = () =>{
+    accordions.forEach(subAcco => (subAcco.classList.remove('active')))
+    acco.classList.add('active');
+  }
+})
